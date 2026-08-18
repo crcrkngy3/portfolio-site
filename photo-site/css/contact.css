@@ -1,0 +1,314 @@
+@charset "UTF-8";
+
+/* ----------
+  共通部分
+-------------*/
+body {
+  font-family: "Poppins", "Zen Maru Gothic", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: .05em;
+  color: #333333;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+/* PC・スマホ表示切り替え */
+.pc-only {
+  display: block;
+}
+
+.sp-only {
+  display: none;
+}
+
+
+/* ----------
+  サイト全体設定
+-------------*/
+.section {
+  padding: 90px 0;
+}
+
+.container {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+ul {
+  list-style: none;
+}
+
+
+/* ----------
+  ヘッダー（HOME共通）
+-------------*/
+.header {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px; 
+  padding: 20px 40px;
+}
+
+.header-logo {
+  display: block;
+}
+
+.header-logo img {
+  width: 100px; 
+  height: auto; 
+}
+
+
+/* ----------
+  ナビゲーションメニュー
+-------------*/
+.gnav-list {
+  display: flex;
+  gap: 20px;
+}
+
+.gnav-item a {
+  position: relative;
+  font-size: 15px;
+  font-weight: 500;
+  display: inline-block;
+  padding: 5px 0;
+  transition: .3s;
+  letter-spacing: .05em;
+}
+
+/* ホバー時に下線を表示 */
+.gnav-item a::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  content: "";
+  transition: .3s;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #333333;
+}
+
+.gnav-item a:hover::after {
+  width: 100%;
+}
+
+
+/* ----------
+  CONTACT メインコンテンツ（PC横並び）
+-------------*/
+.contact-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 0 80px;
+}
+
+.contact-list a {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-btn-text {
+  font-size: 13px;
+  color: #333333;
+}
+.contact-section {
+  width: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+/* 左側：メインビジュアル (MV) */
+.mv {
+  width: 50%;
+}
+
+.mv-container {
+  position: relative; 
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.mv-container img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom; 
+  opacity: 0.5;
+}
+
+/* 写真上のCONTACTタイトル */
+.mv-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 26px;
+  font-weight: 300;
+  color: #787575;
+  letter-spacing: .15em;
+  margin: 0;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+/* アニメーション */
+.blur-in {
+  animation: focusIn 2.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  opacity: 0;
+  filter: blur(12px);
+}
+
+.blur-in.delay {
+  animation-delay: 0.8s;
+}
+
+@keyframes focusIn {
+  0% {
+    opacity: 0;
+    filter: blur(12px);
+    transform: scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: scale(1);
+  }
+}
+
+
+
+/* 本文 */
+.lead {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+/* 注釈テキスト */
+.note {
+  font-size: 12px;
+  color: #797979;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+
+.contact-list {
+  text-align: center;
+}
+
+.contact-list img {
+  width: 45px;
+  transition: opacity 0.3s;
+}
+
+.contact-list a:hover img {
+  opacity: 0.7;
+}
+
+
+/* ----------
+  フッター
+-------------*/
+.footer {
+  padding: 30px;
+  background-color: #ffffff;
+}
+
+.copyright {
+  font-size: 10px;
+  text-align: center;
+  color: #797979;
+}
+
+
+/* ----------
+  レスポンシブ（768px以下）
+-------------*/
+@media screen and (max-width: 768px) {
+  .pc-only {
+    display: none;
+  }
+
+  .sp-only {
+    display: block;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .header .container {
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 30px;
+  }
+
+  .header-logo img {
+    width: 50px;
+    height: auto;
+  }
+
+  /* スマホは縦並びに切り替え */
+  .contact-wrapper {
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px 0 40px;
+  }
+
+  .mv, 
+  .contact-section {
+    width: 100%;
+  }
+
+  .mv-container {
+    max-width: 85%;
+  }
+
+  .mv-container img {
+    opacity: 0.9;
+  }
+
+  .mv-title {
+    display: none;
+  }
+
+  .lead {
+    font-size: 12px;
+  }
+
+  .note {
+    font-size: 8px;
+    margin-top: 32px;
+    line-height: 1.8;
+  }
+}

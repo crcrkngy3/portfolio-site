@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="散歩や旅先で撮影した写真をまとめたポートフォリオサイトです">
+  <link rel="icon" href="img/logo.webp">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <title>Home | bito.photo</title>
+
+  <!-- メインビジュアル画像の事前読み込み（表示速度向上） -->
+  <link rel="preload" as="image" href="img/mv.webp">
+
+   <!-- フォントの指定 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- CSSの設定 -->
+  <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <!-- 全体の箱をwrapperとする -->
+  <div class="wrapper">
+
+    <!-- ヘッダー -->
+    <header class="header">
+      <div class="container">
+        <h1 class="header-logo">
+          <a href="index.html"><img src="img/logo.webp" alt="ホームへ戻る"></a>
+        </h1>
+        <nav class="gnav">
+          <ul class="gnav-list">
+            <li class="gnav-item"><a href="index.html">Home</a></li>
+            <li class="gnav-item"><a href="gallery.html">Gallery</a></li>
+            <li class="gnav-item"><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- /ヘッダー -->
+
+    <!-- メインコンテンツ -->
+    <main class="content">
+      <!-- メインビジュアル -->
+      <div class="mv">
+        <div class="mv-container">
+          <img src="img/mv.webp" alt="メイン画像" class="blur-in" fetchpriority="high">
+          <div class="mv-text-wrap">
+            <p class="mv-text blur-in delay">To be, and not to be.</p>
+          </div>
+        </div>
+      </div>
+      <!-- /メインビジュアル -->
+
+      <!-- ギャラリーセクション -->
+      <section class="gallery section">
+        <div class="container">
+          <!-- 中央配置テキスト -->
+          <p class="gallery-lead">散歩や旅をしながら気ままに写真を撮っています</p>
+        </div>
+
+        <!-- カルーセル（横スクロール）エリア -->
+        <section class="carousel-section blur-in delay">
+          <div class="carousel-wrapper">
+            
+            <!-- 1組目（初期表示されるため即時読み込み） -->
+            <ul class="carousel-list">
+              <li class="carousel-item">
+                <div class="carousel-img">
+                  <a href="gallery.html#artwork"><img src="img/photo05.webp" alt="作品1"></a>
+                </div>
+                <p class="carousel-title">Artwork</p>
+              </li>
+              <li class="carousel-item">
+                <div class="carousel-img">
+                  <a href="gallery.html#portrait"><img src="img/photo02.webp" alt="作品2"></a>
+                </div>
+                <p class="carousel-title">Portrait</p>
+              </li>
+              <li class="carousel-item">
+                <div class="carousel-img">
+                  <a href="gallery.html#ceremony-Event"><img src="img/photo03.webp" alt="作品3"></a>
+                </div>
+                <p class="carousel-title">Ceremony / Event</p>
+              </li>
+              <li class="carousel-item">
+                <div class="carousel-img">
+                  <a href="gallery.html#snap"><img src="img/photo04.webp" alt="作品4"></a>
+                </div>
+                <p class="carousel-title">Snap</p>
+              </li>
+            </ul>
+
+            <!-- 2組目（遅延読み込み設定） -->
+            <ul class="carousel-list" aria-hidden="true">
+              <li class="carousel-item">
+                <div class="carousel-img">
+                  <a href="gallery.html#artwork"><img src="img/photo05.webp" alt="作品1" decoding="async" loading="lazy"></a>
+                </div>
+                <p class="carousel-title">Artwork</p>
+              </li>
+              <li class="carousel-item">
+                <div class="carousel-img">
+                  <a href="gallery.html#portrait"><img src="img/photo02.webp" alt="作品2" decoding="async" loading="lazy"></a>
+                </div>
+                <p class="carousel-title">Portrait</p>
+              </li>
+              <li class="carousel-item">
+                <div class="carousel-img">
+                  <a href="gallery.html#ceremony-Event"><img src="img/photo03.webp" alt="作品3" decoding="async" loading="lazy"></a>
+                </div>
+                <p class="carousel-title">Ceremony / Event</p>
+              </li>
+              <li class="carousel-item">
+                <div class="carousel-img">
+                  <a href="gallery.html#snap"><img src="img/photo04.webp" alt="作品4" decoding="async" loading="lazy"></a>
+                </div>
+                <p class="carousel-title">Snap</p>
+              </li>
+            </ul>
+
+            <!-- 3組目（遅延読み込み設定） -->
+            <ul class="carousel-list" aria-hidden="true">
+              <li class="carousel-item">
+                <div class="carousel-img">
+                  <a href="gallery.html#artwork"><img src="img/photo05.webp" alt="作品1" decoding="async" loading="lazy"></a>
+                </div>
+                <p class="carousel-title">Artwork</p>
+              </li>
+              <li class="carousel-item">
+                <div class="carousel-img">
+                  <a href="gallery.html#portrait"><img src="img/photo02.webp" alt="作品2" decoding="async" loading="lazy"></a>
+                </div>
+                <p class="carousel-title">Portrait</p>
+              </li>
+              <li class="carousel-item">
+                <div class="carousel-img">
+                  <a href="gallery.html#ceremony-Event"><img src="img/photo03.webp" alt="作品3" decoding="async" loading="lazy"></a>
+                </div>
+                <p class="carousel-title">Ceremony / Event</p>
+              </li>
+              <li class="carousel-item">
+                <div class="carousel-img">
+                  <a href="gallery.html#snap"><img src="img/photo04.webp" alt="作品4" decoding="async" loading="lazy"></a>
+                </div>
+                <p class="carousel-title">Snap</p>
+              </li>
+            </ul>
+
+            <!-- 4組目（遅延読み込み設定） -->
+            <ul class="carousel-list" aria-hidden="true">
+              <li class="carousel-item">
+                <div class="carousel-img">
+                  <a href="gallery.html#artwork"><img src="img/photo05.webp" alt="作品1" decoding="async" loading="lazy"></a>
+                </div>
+                <p class="carousel-title">Artwork</p>
+              </li>
+              <li class="carousel-item">
+                <div class="carousel-img">
+                  <a href="gallery.html#portrait"><img src="img/photo02.webp" alt="作品2" decoding="async" loading="lazy"></a>
+                </div>
+                <p class="carousel-title">Portrait</p>
+              </li>
+              <li class="carousel-item">
+                <div class="carousel-img">
+                  <a href="gallery.html#ceremony-Event"><img src="img/photo03.webp" alt="作品3" decoding="async" loading="lazy"></a>
+                </div>
+                <p class="carousel-title">Ceremony / Event</p>
+              </li>
+              <li class="carousel-item">
+                <div class="carousel-img">
+                  <a href="gallery.html#snap"><img src="img/photo04.webp" alt="作品4" decoding="async" loading="lazy"></a>
+                </div>
+                <p class="carousel-title">Snap</p>
+              </li>
+            </ul>
+            
+          </div>
+        </section>
+      </section>
+      <!-- /ギャラリーセクション -->
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+      <div class="counter-area">
+        <p class="counter-label">COUNTER</p>
+       
+        <!-- FC2カウンター ここから -->
+         <!-- 非表示中 
+        <script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=41143325&main=1" defer></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=41143325&main=1" /></noscript>
+        -->
+        <!-- FC2カウンター ここまで -->
+      </div>
+
+      <div class="copyright">&copy;2026 bito.photo</div>
+    </footer>
+    <!-- /フッター -->
+
+  </div>
+  <!-- /.wrapper -->
+</body>
+</html>

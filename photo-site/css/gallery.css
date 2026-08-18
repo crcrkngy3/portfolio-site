@@ -1,0 +1,353 @@
+@charset "UTF-8";
+
+/* 共通部分 */
+body {
+  font-family: "Poppins", "Zen Maru Gothic", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: .05em;
+  color: #333333;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.pc-only {
+  display: block;
+}
+
+.sp-only {
+  display: none;
+}
+
+/* 全体設定 */
+.section {
+  padding: 90px 0;
+}
+
+.container {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ヘッダー */
+.header {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.header-top {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  gap: 10px; 
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px; 
+  padding: 20px 40px;
+}
+
+.header-logo {
+  display: block;
+}
+
+.header-logo img {
+  width: 100px; 
+  height: auto; 
+}
+
+/* ナビゲーション */
+.gnav-list {
+  display: flex;
+  gap: 20px;
+}
+
+.gnav-item a {
+  position: relative;
+  font-size: 15px;
+  font-weight: 500;
+  display: inline-block;
+  padding: 5px 0;
+  transition: .3s;
+  letter-spacing: .05em;
+}
+
+.gnav-item a:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  content: "";
+  transition: .3s;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #333333;
+}
+
+.gnav-item a:hover:after {
+  width: 100%;
+}
+
+/* ギャラリー一覧 */
+.gallery-section .container {
+  display: flex;
+  flex-direction: column;
+  gap: 100px; 
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.gallery-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.gallery-img-link {
+  display: block;
+  flex-shrink: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.gallery-text-link {
+  display: block;
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+}
+
+.gallery-img {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.gallery-img img {
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+#ceremony-Event .gallery-img img {
+  object-position: center 90%; 
+}
+
+.gallery-text-box {
+  width: 100%;
+}
+
+.gallery-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333333;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-text {
+  font-size: 14px;
+  line-height: 2.0;
+  color: #333333;
+}
+
+.gallery-img-link:hover .gallery-img img {
+  transform: scale(1.05);
+}
+
+.gallery-text-link:hover .gallery-title {
+  opacity: 0.7;
+}
+
+.view-more {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #333333;
+}
+
+.view-more .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-text-link:hover .view-more .arrow {
+  transform: translateX(4px);
+}
+
+/* 戻るボタン */
+.back-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 180px;
+  padding: 12px 0;
+  background-color: #f8f8f8;
+  color: #333333;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.back-arrow {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.back-btn:hover {
+  background-color: #dcdcdc;
+  color: #ffffff;
+}
+
+/* フッター */
+.footer {
+  padding: 30px;
+  background-color: #ffffff;
+}
+
+.copyright {
+  font-size: 10px;
+  text-align: center;
+  color: #797979;
+}
+
+/* レスポンシブ（768px以下） */
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 50px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .header .container {
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 30px;
+  }
+  
+  .header-logo img {
+    width: 50px;
+    height: auto; 
+  }
+
+  .gallery-section .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 24px;  
+    padding-right: 24px;
+    gap: 60px;
+  }
+
+  .gallery-container {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 20px;
+    scroll-margin-top: 40vh; 
+  }
+
+  .gallery-img-link {
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    transition: transform 0.1s ease, opacity 0.1s ease;
+  }
+
+  .gallery-img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto; 
+  }
+
+  .gallery-text-link {
+    width: 100%;
+    display: block;
+    transition: transform 0.1s ease, opacity 0.1s ease;
+  }
+
+  .gallery-text-box {
+    width: 100%;
+    text-align: left;
+  }
+  
+  .gallery-title {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .gallery-text {
+    font-size: 10px;
+    line-height: 1.8;
+  }
+
+  .gallery-img-link:active {
+    transform: scale(0.97);
+    opacity: 0.6;
+  }
+
+  .gallery-text-link:active {
+    transform: scale(0.97);
+    opacity: 0.6;
+  }
+
+
+  .view-more {
+    font-size: 11px;
+    margin-top: 8px;
+  }
+
+
+  .back-btn-container {
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+
+  .back-btn {
+    width: 150px;
+    padding: 10px 0;
+    font-size: 16px;
+  }
+
+  .pc-only {
+    display: none;
+  }
+
+  .sp-only {
+    display: block;
+  }
+}

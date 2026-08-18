@@ -1,0 +1,322 @@
+@charset "UTF-8";
+
+/* 共通部分 */
+body {
+  font-family: "Poppins", "Zen Maru Gothic", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: .05em;
+  color: #333333;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.pc-only {
+  display: block;
+}
+
+.sp-only {
+  display: none;
+}
+
+/* 全体設定 */
+.section {
+  padding: 90px 0;
+}
+
+.container {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ヘッダー */
+.header {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.header-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+  padding: 20px 40px;
+}
+
+.header-logo {
+  display: block;
+}
+
+.header-logo img {
+  width: 100px;
+  height: auto;
+}
+
+/* ナビゲーション */
+.gnav-list {
+  display: flex;
+  gap: 20px;
+}
+
+.gnav-item a {
+  position: relative;
+  font-size: 15px;
+  font-weight: 500;
+  display: inline-block;
+  padding: 5px 0;
+  transition: .3s;
+  letter-spacing: .05em;
+}
+
+.gnav-item a:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  content: "";
+  transition: .3s;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #333333;
+}
+
+.gnav-item a:hover:after {
+  width: 100%;
+}
+
+/* Artwork ページ */
+.artwork-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.artwork-intro {
+  width: 100%;
+  max-width: 700px;
+  background-color: #f7f7f7;
+  padding: 24px 20px;
+  margin-top: 20px;
+  margin-bottom: 70px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.intro-line {
+  font-size: 13px;
+  color: #333333;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.artwork-item {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 90px;
+}
+
+.artwork-img-link {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+}
+
+.artwork-img {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.artwork-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.artwork-img-link:hover .artwork-img img {
+  opacity: 0.85;
+}
+
+.artwork-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 90px;
+}
+
+.artwork-row .artwork-item {
+  width: calc(50% - 15px);
+  margin-bottom: 0;
+}
+
+.artwork-caption {
+  text-align: center;
+}
+
+.caption-link {
+  display: block;
+  text-decoration: none;
+  color: #333333;
+  transition: color 0.3s ease, opacity 0.3s ease, transform 0.1s ease;
+}
+
+.artist-title {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 6px;
+  color: inherit;
+}
+
+.artwork-detail {
+  font-size: 13px;
+  line-height: 1.7;
+  color: inherit;
+}
+
+.caption-link:hover {
+  color: #888888;
+  opacity: 0.8;
+}
+
+.caption-link:active {
+  transform: scale(0.98);
+  opacity: 0.6;
+}
+
+/* 戻るボタン */
+.back-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 180px;
+  padding: 12px 0;
+  background-color: #f8f8f8;
+  color: #333333;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.back-arrow {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.back-btn:hover {
+  background-color: #dcdcdc;
+  color: #ffffff;
+}
+
+/* フッター */
+.footer {
+  padding: 30px;
+  background-color: #ffffff;
+}
+
+.copyright {
+  font-size: 10px;
+  text-align: center;
+  color: #797979;
+}
+
+/* レスポンシブ（768px以下） */
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 50px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .header .container {
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 30px;
+  }
+
+  .header-logo img {
+    width: 50px;
+    height: auto;
+  }
+
+  .artwork-intro {
+    padding: 18px 15px;
+    margin-bottom: 50px;
+  }
+
+  .intro-line {
+    font-size: 8px;
+    line-height: 1.6;
+  }
+
+  .artwork-item {
+    margin-bottom: 60px;
+  }
+
+  .artwork-img {
+    margin-bottom: 14px;
+  }
+
+  .artist-title {
+    font-size: 12px;
+  }
+
+  .artwork-detail {
+    font-size: 8px;
+  }
+
+  .artwork-row {
+    gap: 15px;
+    margin-bottom: 60px;
+  }
+
+  .artwork-row .artwork-item {
+    width: calc(50% - 7.5px);
+  }
+}

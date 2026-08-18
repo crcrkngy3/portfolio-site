@@ -1,0 +1,281 @@
+@charset "UTF-8";
+
+/* ----------
+  共通部分
+-------------*/
+body {
+  font-family: "Poppins", "Zen Maru Gothic", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: .05em;
+  color: #333333;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+/* PC・スマホ表示切り替え */
+.pc-only {
+  display: block;
+}
+
+.sp-only {
+  display: none; /* PCではスマホ用を隠す */
+}
+
+
+/* ----------
+  サイト全体設定
+-------------*/
+.section {
+  padding: 90px 0;
+}
+
+.container {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+ul {
+  list-style: none;
+}
+
+
+/* ----------
+  ヘッダー
+-------------*/
+.header {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.header-top {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  gap: 10px; 
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px; 
+  padding: 20px 40px;
+}
+
+.header-logo {
+  display: block;
+}
+
+.header-logo img {
+  width: 100px; 
+  height: auto; 
+}
+
+
+/* ----------
+  ナビゲーションメニュー
+-------------*/
+.gnav-list {
+  display: flex;
+  gap: 20px;
+}
+
+.gnav-item a {
+  position: relative;
+  font-size: 15px;
+  font-weight: 500;
+  display: inline-block;
+  padding: 5px 0;
+  transition: .3s;
+  letter-spacing: .05em;
+}
+
+/* ホバー時に下線を表示 */
+.gnav-item a::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  content: "";
+  transition: .3s;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #333333;
+}
+
+.gnav-item a:hover::after {
+  width: 100%;
+}
+
+
+/* ----------
+  写真ギャラリーエリア
+-------------*/
+.photo-gallery {
+  max-width: 900px; /* 写真全体の表示幅 */
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* グリッド共通の余白 */
+.photo-grid {
+  display: grid;
+  gap: 20px; /* 写真同士の隙間 */
+  margin-bottom: 20px; /* 段ごとの下余白 */
+}
+
+/* 2列レイアウト */
+.grid-2col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* 1列レイアウト */
+.grid-1col {
+  grid-template-columns: 1fr;
+}
+
+/* 各写真項目の設定 */
+.photo-item {
+  width: 100%;
+  overflow: hidden;
+}
+
+.photo-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* おまけテキスト部分 */
+.gallery-lead {
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 40px auto 10px;
+  color: #333333;
+  width: 100%;
+}
+
+
+/* ----------
+  戻るボタン
+-------------*/
+.back-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 180px;
+  padding: 12px 0;
+  background-color: #f8f8f8;
+  color: #333333;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.back-arrow {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.back-btn:hover {
+  background-color: #dcdcdc;
+  color: #ffffff;
+}
+
+
+/* ----------
+  フッター
+-------------*/
+.footer {
+  padding: 30px;
+  background-color: #ffffff;
+}
+
+.copyright {
+  font-size: 10px;
+  text-align: center;
+  color: #797979;
+}
+
+
+/* ----------
+  レスポンシブ（768px以下）
+-------------*/
+@media screen and (max-width: 768px) {
+  /* PC・スマホ表示切り替え */
+  .pc-only {
+    display: none;
+  }
+
+  .sp-only {
+    display: block;
+  }
+
+  .section {
+    padding: 50px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .header .container {
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 30px;
+  }
+  
+  .header-logo img {
+    width: 50px;
+    height: auto; 
+  }
+
+  /* 写真ギャラリーのスマホ調整 */
+  .photo-gallery {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .photo-grid {
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .grid-2col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .back-btn-container {
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+
+  .gallery-lead {
+    margin: 30px auto 12px;
+    font-size: 10px;
+  }
+}

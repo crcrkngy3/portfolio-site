@@ -1,0 +1,585 @@
+@charset "UTF-8";
+/* ----------
+共通部分 
+-------------*/
+body{
+  font-family: "Poppins", "Zen Maru Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  letter-spacing: .05em;
+  color: #1a1a1a;
+}
+
+a{
+  text-decoration: none;
+  color: #1a1a1a;
+}
+a:hover{
+  color: #9B6E56;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  border-style: none;
+}
+
+.pc-only {
+  display: block;
+}
+
+.sp-only {
+  display: none;
+}
+
+
+
+/*----------
+ サイト全体に効かせる設定
+ ----------- */
+
+.wrapper{
+   /* headerのサイズに合わせてメインの始まりの場所を調整する、今は73pxにしている */
+  padding-top: 73px;
+}
+
+.section {
+  padding: 90px 0;
+}
+
+
+.section:nth-of-type(odd) {
+  /* 奇数だけ背景色付ける */
+  background-color: #f7f7f7;
+}
+
+.container {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+ul {
+  list-style: none;
+}
+
+/*----------
+ それぞれのメニュー（目次）の装飾 
+ -----------*/
+
+.title {
+  font-size: 35px;
+  font-weight: 900;
+  line-height: 1;
+  padding: 80px 40px;
+  margin-bottom:  120px; 
+  text-align: center;
+  letter-spacing: .05em;
+  color:  #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title::before {
+  content: '';
+  width: 28px;  
+  height: 2px;  
+  background-color: #9B6E56; 
+  margin-right: 15px;      
+}
+
+.title::after {
+  content: '';
+  width: 28px;  
+  height: 2px;  
+  background-color: #9B6E56; 
+  margin-left: 15px;      
+}
+
+/*---------
+ CONTACTのすぐ下の文章にだけ反映
+ ---------- */
+
+.lead {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+
+
+
+/*----------
+ header 
+ -----------*/
+
+.header{
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+
+
+.header .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.header-logo{
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-right: 20px;
+  letter-spacing: .05em;
+}
+
+/* ロゴだけ色少し変える */
+.header-logo a{
+  color: #1a1a1a;
+}
+.header-logo a:hover {
+  transition: .3s;
+  color: #9B6E56;
+}
+
+/*----------
+ナビゲーションメニュー
+------------*/
+
+.gnav-list{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+/* 最後の項目以外間に20px空ける */
+.gnav-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.gnav-item a {
+  position: relative;
+  font-size: 13px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 0;
+  transition: .3s;
+  letter-spacing: .05em;
+}
+
+/* カーソール合わせた時に下に下線が出る仕様にする */
+.gnav-item a:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  content: "";
+  transition: .3s;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #1a1a1a;
+}
+
+.gnav-item a:hover:after {
+  width: 100%;
+}
+
+
+/*----------
+ main 
+ -----------*/
+
+.mv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+.mv-container{
+position: relative;
+padding: 0 20px;
+}
+
+.mv-container img {
+  width: 100%;
+  height: auto;
+}
+
+/*----------
+ WORKS
+ -----------*/
+
+.works-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: -40px;
+  max-width: 1000px;  
+  margin-left: auto;   
+  margin-right: auto;
+}
+.works-item{
+  width: 48%;
+   margin-bottom: 40px;
+}
+
+.works-item:hover {
+  opacity: .9;
+}
+
+.works-img img {
+  border: 1px solid #e6e6e6;
+  width: 90%;
+  object-fit: cover;
+}
+
+.works-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.works-info {
+  font-size: 13px;
+  margin-top: 5px;
+  line-height: 1.8;
+  color: #666;
+  margin-top: 10px;
+  letter-spacing: 0.03em;
+  text-align: left;
+  max-width: 85%;      
+  margin-right: auto;
+}
+
+
+/*----------
+ 画像に載せるテックラベル 
+ -----------*/
+
+ .works-img {
+  position: relative; 
+}
+.tech-labels{
+  position: absolute;  
+  top: 10px;         
+  left: 10px;         
+  display: flex;      
+  gap: 5px;          
+  z-index: 10;        
+}
+
+.label{
+  background-color: rgba(0, 0, 0, 0.7); 
+  color: #fff;                        
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+.tech-labels {
+  opacity: 0;                
+  transition: opacity 0.3s;  
+}
+.works-item:hover .tech-labels {
+  opacity: 1;               
+}
+
+/*---------
+ SKILL 
+ ----------*/
+
+.skill-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: -50px;
+}
+.skill-item{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 48%;
+  margin-bottom: 50px;
+}
+
+.skill-img{
+  width: 60px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.skill-body{
+  flex: 1;
+
+}
+.skill-name{
+  margin-bottom: 10px;
+}
+.skill-text{
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/*----------
+ ABOUT 
+ -----------*/
+
+.profile{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+  align-items: center; 
+}
+.profile-img{
+  width: 20%;
+  margin-right: 30px;
+  border-radius: 50%;
+}
+.profile-img img {
+  border-radius: 50%;
+}
+.profile-body {
+  flex: 1;
+}
+.profile-body p {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/*--------
+ CONTACT 
+ ---------*/
+
+
+.contact-list {
+  text-align: center;
+}
+
+.lead{
+  font-size: 16px;
+  text-align: center;
+}
+
+.contact-list img{
+  width: 50px;         
+  margin-top: 20px;
+  padding-bottom: 100px;
+
+}
+
+/* TOPへ戻るボタン*/
+.page-top{
+font-weight: bold;
+padding: 10px;
+cursor: pointer;
+text-align: center;
+background-color: #b4b4b4;
+transition: 0.3s; 
+}
+
+
+.page-top .material-icons-outlined {
+  vertical-align: bottom;
+  color: #fff;
+}
+
+
+.page-top:hover .material-icons-outlined {
+  color: #9B6E56; 
+  transform: translateY(-5px); 
+}
+
+
+/*----------
+ footer 
+ -----------*/
+.footer {
+  padding: 30px;
+  background-color: #ffffff;
+}
+
+.copyright {
+  font-size: 10px;
+  text-align: center;
+  color: #797979;
+}
+
+
+/*--------------------
+以下スマホ（７６７）用
+----------------------*/
+
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+
+  .pc-only {
+    display: none;
+  }
+
+  .sp-only {
+    display: block;
+  }
+
+  /* 見出し */
+  .title {
+     padding: 50px 20px;  
+    margin-bottom: 60px;
+    font-size: 26px;
+  
+  }
+
+  .lead {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  
+  /* レイアウト */
+  .wrapper {
+    padding-top: 57px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  /* ヘッダー */
+  .header .container {
+    padding: 15px;
+  }
+
+  .header-logo {
+    font-size: 15px;
+    margin-right: 15px;
+  }
+
+  .gnav-item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .gnav-item a {
+    font-size: 10px;
+  }
+
+  .gnav-item a:after {
+    display: none;
+  }
+  
+  /*  メインビジュアル */
+  .mv {
+    height: 40vh;
+  }
+
+  .mv-container {
+    padding: 0 20px;
+  }
+
+
+  /* Works */
+  .works-name {
+    font-size: 12px;
+  }
+
+  .works-info {
+    margin-top: 3px;
+  }
+
+  .works-list {
+    justify-content: space-between;
+  }
+
+  /* 携帯時のみ1縦列で全幅表示に変更 */
+ /* Works */
+  .works-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .works-item {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 450px; 
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .works-name {
+    font-size: 12px;
+  }
+
+  .works-img img {
+    width: 100%; 
+  }
+
+  .works-info {
+    margin-top: 3px;
+    max-width: 100%; 
+  }
+  
+  /* Skill */
+  .skill-list {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .skill-item {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+
+  .skill-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .skill-name {
+    margin-bottom: 5px;
+  }
+
+  .skill-text {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  /* About */
+  .profile {
+    display: block;
+  }
+  .profile-img {
+    width: 150px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+
+  .profile-body p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .profile-body p:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  
+  /* フッター */
+  .footer {
+    padding: 20px;
+  }
+}
