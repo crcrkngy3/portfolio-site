@@ -168,7 +168,9 @@ ul {
   color: #333333;
   width: 100%;
 }
-
+.omake-section {
+  margin-top: 300px;
+}
 
 /* ----------
   戻るボタン
@@ -277,5 +279,8 @@ ul {
   .gallery-lead {
     margin: 30px auto 12px;
     font-size: 10px;
+  }
+    .omake-section {
+    margin-top: 120px;
   }
 }

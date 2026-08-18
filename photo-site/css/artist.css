@@ -1,14 +1,14 @@
 @charset "UTF-8";
 
-/* 共通部分 */
+/* ----------
+  共通部分
+-------------*/
 body {
-  width: 100%;
   font-family: "Poppins", "Zen Maru Gothic", sans-serif;
   font-weight: 400;
   font-size: 16px;
   letter-spacing: .05em;
   color: #333333;
-  overflow-x: hidden;
 }
 
 a {
@@ -22,15 +22,17 @@ img {
   vertical-align: bottom;
 }
 
+/* PC・スマホ表示切り替え */
 .pc-only {
   display: block;
 }
 
 .sp-only {
-  display: none;
+  display: none; /* PCではスマホ用を隠す */
 }
-
-/* 全体設定 */
+/* ----------
+  サイト全体設定
+-------------*/
 .section {
   padding: 90px 0;
 }
@@ -45,7 +47,10 @@ ul {
   list-style: none;
 }
 
-/* ヘッダー */
+
+/* ----------
+  ヘッダー
+-------------*/
 .header {
   width: 100%;
   background-color: #ffffff;
@@ -53,16 +58,16 @@ ul {
 
 .header-top {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
+  flex-direction: column; 
+  align-items: flex-start; 
+  gap: 10px; 
 }
 
 .header .container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 40px;
+  gap: 40px; 
   padding: 20px 40px;
 }
 
@@ -71,11 +76,14 @@ ul {
 }
 
 .header-logo img {
-  width: 100px;
-  height: auto;
+  width: 100px; 
+  height: auto; 
 }
 
-/* ナビゲーション */
+
+/* ----------
+  ナビゲーションメニュー
+-------------*/
 .gnav-list {
   display: flex;
   gap: 20px;
@@ -91,7 +99,8 @@ ul {
   letter-spacing: .05em;
 }
 
-.gnav-item a:after {
+/* ホバー時に下線を表示 */
+.gnav-item a::after {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -104,9 +113,10 @@ ul {
   background-color: #333333;
 }
 
-.gnav-item a:hover:after {
+.gnav-item a:hover::after {
   width: 100%;
 }
+
 
 /* アーティスト詳細ページ */
 .artist-inner {
@@ -220,17 +230,16 @@ ul {
     padding: 0 20px;
   }
 
-  .header .container {
+    .header .container {
     padding-left: 10px;
     padding-right: 10px;
     gap: 30px;
   }
 
-  .header-logo img {
+   .header-logo img {
     width: 50px;
-    height: auto;
+    height: auto; 
   }
-
   .artist-name {
   font-size: 26px;
 }
@@ -264,4 +273,6 @@ ul {
     padding: 10px 0;
     font-size: 16px;
   }
+  
+  
 }
