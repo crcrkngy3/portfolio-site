@@ -43,69 +43,6 @@ ul {
   list-style: none;
 }
 
-/* ヘッダー */
-.header {
-  width: 100%;
-  background-color: #ffffff;
-}
-
-.header-top {
-  display: flex;
-  flex-direction: column; 
-  align-items: flex-start; 
-  gap: 10px; 
-}
-
-.header .container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 40px; 
-  padding: 20px 40px;
-}
-
-.header-logo {
-  display: block;
-}
-
-.header-logo img {
-  width: 100px; 
-  height: auto; 
-}
-
-/* ナビゲーション */
-.gnav-list {
-  display: flex;
-  gap: 20px;
-}
-
-.gnav-item a {
-  position: relative;
-  font-size: 15px;
-  font-weight: 500;
-  display: inline-block;
-  padding: 5px 0;
-  transition: .3s;
-  letter-spacing: .05em;
-}
-
-.gnav-item a:after {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 1px;
-  content: "";
-  transition: .3s;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  background-color: #333333;
-}
-
-.gnav-item a:hover:after {
-  width: 100%;
-}
-
 /* ギャラリー一覧 */
 .gallery-section .container {
   display: flex;
@@ -254,16 +191,6 @@ ul {
     padding: 0 20px;
   }
 
-  .header .container {
-    padding-left: 10px;
-    padding-right: 10px;
-    gap: 30px;
-  }
-  
-  .header-logo img {
-    width: 50px;
-    height: auto; 
-  }
 
   .gallery-section .container {
     width: 100%;
