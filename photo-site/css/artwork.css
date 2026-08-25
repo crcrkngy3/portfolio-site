@@ -44,6 +44,12 @@ ul {
 }
 
 
+html {
+  scroll-behavior: smooth;
+}
+.artwork-caption {
+  scroll-margin-top: 100px; /* 必要に応じて高さを調整してください */
+}
 /* Artwork ページ */
 .artwork-section .container {
   display: flex;
