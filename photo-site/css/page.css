@@ -51,20 +51,17 @@ ul {
 
 
 /* ----------
-   フェードイン（ボケからじんわり）用のアニメーション
+   フェードインアニメーション
 ------------- */
 @keyframes blurIn {
   0% {
     opacity: 0;
-    filter: blur(10px);
     transform: translateY(15px);
   }
   100% {
     opacity: 1;
-    filter: blur(0);
     transform: translateY(0);
   }
-
 }
 
 /* 付与するクラス */
