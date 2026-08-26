@@ -50,7 +50,27 @@ ul {
 }
 
 
+/* ----------
+   フェードイン（ボケからじんわり）用のアニメーション
+------------- */
+@keyframes blurIn {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
 
+}
+
+/* 付与するクラス */
+.blur-in {
+  animation: blurIn 3s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
 /* ----------
   写真ギャラリーエリア
 -------------*/

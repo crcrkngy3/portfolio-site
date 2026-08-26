@@ -48,7 +48,26 @@ html {
   scroll-behavior: smooth;
 }
 .artwork-caption {
-  scroll-margin-top: 100px; /* 必要に応じて高さを調整してください */
+  scroll-margin-top: 100px; 
+}
+
+/* ふんわりボケて浮き上がるアニメーションの定義 */
+@keyframes blurIn {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+/* アニメーションを適用するクラス */
+.blur-in {
+  animation: blurIn 3s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 /* Artwork ページ */
 .artwork-section .container {
