@@ -116,7 +116,7 @@ ul {
 .gallery-text-link:hover .gallery-title {
   opacity: 0.7;
 }
-
+/* リンク */
 .view-more {
   display: inline-block;
   margin-top: 16px;
@@ -124,6 +124,8 @@ ul {
   font-weight: 500;
   letter-spacing: 0.05em;
   color: #333333;
+  text-decoration: none;
+  transition: opacity 0.3s ease; 
 }
 
 .view-more .arrow {
@@ -131,10 +133,13 @@ ul {
   transition: transform 0.3s ease;
 }
 
-.gallery-text-link:hover .view-more .arrow {
-  transform: translateX(4px);
+.view-more:hover {
+  opacity: 0.7; 
 }
 
+.view-more:hover .arrow {
+  transform: translateX(4px);
+}
 /* 戻るボタン */
 .back-btn-container {
   display: flex;

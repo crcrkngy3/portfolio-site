@@ -96,6 +96,35 @@ ul {
   object-fit: cover;
 }
 
+/* リンク */
+.artist-link-wrap {
+  margin-top: 28px;
+}
+
+.instagram-link {
+  font-size: 15px;
+  font-weight: 500;
+  display: inline-block;
+  padding: 5px 0;
+  color: #333333;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  letter-spacing: 0.05em;
+}
+
+.instagram-link .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* ホバー時は文字が少し薄くなり、矢印が右へ動く */
+.instagram-link:hover {
+  opacity: 0.7;
+}
+
+.instagram-link:hover .arrow {
+  transform: translateX(4px);
+}
 /* 戻るボタン */
 .back-btn-container {
   display: flex;
