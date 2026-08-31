@@ -98,7 +98,7 @@ ul {
 
 /* リンク */
 .artist-link-wrap {
-  margin-top: 28px;
+  margin-top: 80px;
 }
 
 .instagram-link {
@@ -206,7 +206,13 @@ ul {
     line-height: 1.8;
     margin-bottom: 20px;
   }
+  .artist-link-wrap {
+    margin-top: 40px; 
+  }
 
+  .instagram-link {
+    font-size: 10px; 
+  }
   .artist-img-col {
     width: 100%;
     position: static;
