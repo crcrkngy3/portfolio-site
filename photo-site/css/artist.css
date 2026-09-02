@@ -211,7 +211,8 @@ ul {
   }
 
   .instagram-link {
-    font-size: 10px; 
+    font-size: 12px; 
+    font-weight: bold;
   }
   .artist-img-col {
     width: 100%;
