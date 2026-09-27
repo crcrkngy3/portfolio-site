@@ -51,7 +51,7 @@ ul {
 
 
 /* ----------
-   フェードインアニメーション
+    フェードインアニメーション
 ------------- */
 @keyframes blurIn {
   0% {
@@ -107,17 +107,57 @@ ul {
   object-fit: cover;
 }
 
-/* おまけテキスト部分 */
+/* ----------
+  View More ボタンエリア
+-------------*/
+.btn-container {
+  display: flex;
+  justify-content: center; /* 中央寄せ */
+  margin-top: 60px;        /* 上の写真との余白 */
+  margin-bottom: 60px;     /* 下との余白 */
+}
+
+.more-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #333333;
+  padding: 8px 16px;
+  border-bottom: 1px solid #333333; /* 下線をつけてボタンらしさを演出 */
+  transition: all 0.3s ease;
+}
+
+/* 矢印アイコンの装飾 */
+.more-link-btn .arrow {
+  font-size: 18px;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+/* ホバー時の動き（Backボタンとは異なる、テキスト＋矢印の動き） */
+.more-link-btn:hover {
+  opacity: 0.6; /* 薄くなって押せる感が出る */
+}
+
+.more-link-btn:hover .arrow {
+  transform: translateX(5px); /* 矢印が右にすっと動く */
+}
+
+/* おまけテキスト・セクション部分 */
 .gallery-lead {
   text-align: center;
   font-size: 13px;
   line-height: 1.8;
-  margin: 40px auto 10px;
+  margin: 0 auto 10px;
   color: #333333;
   width: 100%;
 }
 .omake-section {
-  margin-top: 300px;
+  margin-top: 200px; /* おまけセクションをしっかり下へ配置 */
 }
 
 /* ----------
@@ -208,16 +248,25 @@ ul {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .btn-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .more-link-btn {
+    font-size: 13px;
+  }
+
   .back-btn-container {
     margin-top: 50px;
     margin-bottom: 40px;
   }
 
   .gallery-lead {
-    margin: 30px auto 12px;
+    margin: 0 auto 12px;
     font-size: 10px;
   }
-    .omake-section {
-    margin-top: 120px;
+  .omake-section {
+    margin-top: 100px; 
   }
 }
