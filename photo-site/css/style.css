@@ -16,10 +16,15 @@ a {
   color: #333333;
 }
 
+/* 全画像で選択・長押しコールアウト・ドラッグを無効化 */
 img {
   max-width: 100%;
   height: auto;
   vertical-align: bottom;
+  -webkit-touch-callout: none; /* iOS Safari 長押しメニュー無効化 */
+  -webkit-user-select: none;   /* 選択不可 */
+  user-select: none;           /* 選択不可 */
+  -webkit-user-drag: none;     /* iOS/Webkitドラッグ保存無効化 */
 }
 
 .pc-only {
@@ -102,6 +107,30 @@ ul {
     filter: blur(0px);
     transform: scale(1);
   }
+}
+
+/* ----------
+  画像長押し保存防止（透過カバー）
+-------------*/
+.carousel-img,
+.photo-item {
+  position: relative; /* カバーの位置基準 */
+}
+
+
+.carousel-img::after,
+.photo-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  user-select: none;
+  pointer-events: none; /* ← 追加：下にあるリンクのクリックを妨げないようにする */
 }
 
 /* ギャラリー・カルーセル */
@@ -226,7 +255,6 @@ ul {
     font-size: 14px;
     top: 18%;
   }
-
 
   .gallery-lead {
     font-size: 12px;
