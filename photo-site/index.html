@@ -3,11 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="散歩や旅先で撮影した写真をまとめたポートフォリオサイトです">
+  <meta name="description" content="散歩や旅先で撮影した写真をまとめています">
   <link rel="icon" href="img/logo.webp">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 
   <title>Home | bito.photo</title>
+
+<!-- OGP基本設定 -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="bito.photo">
+  <meta property="og:description" content="散歩や旅先で撮影した写真をまとめています">
+  <meta property="og:url" content="https://interim-web.com/photo-site/index.html">
+  <meta property="og:site_name" content="bito.photo">
+  
+  <!-- ★シェア画像の指定（絶対パスで指定） -->
+  <meta property="og:image" content="https://interim-web.com/photo-site/img/ogp.png">
+<!-- X（旧Twitter）カード設定 -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="bito.photo">
+<meta name="twitter:description" content="散歩や旅先で撮影した写真をまとめています">
+<meta name="twitter:image" content="https://interim-web.com/photo-site/img/ogp.png">
 
   <!-- メインビジュアル画像の事前読み込み（表示速度向上） -->
   <link rel="preload" as="image" href="img/mv.webp">
@@ -20,7 +35,6 @@
   <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
   <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
 <link href="css/header.css" media="all" rel="stylesheet" type="text/css" />
-
 </head>
 <body>
   <!-- 全体の箱をwrapperとする -->
@@ -60,7 +74,8 @@
       <section class="gallery section">
         <div class="container">
           <!-- 中央配置テキスト -->
-          <p class="gallery-lead">散歩や旅をしながら気ままに写真を撮っています</p>
+          <p class="gallery-lead">散歩や旅をしながら気ままに写真を撮っています<br>
+          <br>メニューの「Gallery」から<br>カテゴリ毎の写真をご覧いただけます</p>
         </div>
 
         <!-- カルーセル（横スクロール）エリア -->
